@@ -1,0 +1,169 @@
+.carousel-inner{
+    height: 600px;
+    object-fit: contain;
+    
+    margin-bottom: 40px;
+}
+img{
+    height: 550px;
+}
+.content{
+    margin-left: 100px;
+}  
+.head{
+    height: 70px;
+}
+.card-img-top{
+    height: 250px !important;
+    width: 250px !important;
+    padding: 20px;
+}
+.body{
+background-color: rgba(7, 7, 7, 0.863);
+}
+.card{
+    background-color:rgba(42, 42, 42, 0.863) !important;
+    margin-bottom: 30px;
+    
+}
+
+.header{
+    background-color: rgb(25, 25, 25) !important;
+}
+.top{
+    background-color: rgba(7, 7, 7, 0.863);
+}
+.carousel-indicators button{
+    background-color: white !important;
+    width: 6px;
+    height: 6px;
+    border-radius: 50% !important;
+    margin: 0 6px;
+    transition: 0.3s ease;
+}
+
+.carousel-indicators [data-bs-target] {background-color: #fff; width: 2px; height: 5px; border-radius: 100%; margin: 0 5px;}
+   .carousel-indicators [data-bs-target]:hover {
+  background-color: #f44336; 
+  /* transform: scale(2);  */
+  transition: all 0.3s ease;
+}
+.ouradvantages{
+       background-color:rgba(10, 10, 10, 0.863) !important;
+}
+.ouradvantages ul{
+    margin-bottom: 0 !important;
+}
+.card{
+    margin-bottom: 0 !important;
+   border: 0 !important;
+}
+.cardfe:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.mainimage{
+    height: 400px;
+    margin-left: 50px !important;
+
+}
+.sideimage{
+    height: 100px;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+.originalimage{
+    margin-top: 80px !important;
+}
+.detailspage{
+    background-color: rgba(7, 7, 7, 0.863);
+}
+.spec-row{
+    margin-bottom: 16px;
+}
+.allproducts{
+    background-color:  rgba(7, 7, 7, 0.863);
+}
+.allproductscard{
+    height: 500px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+a{
+    text-decoration: none !important;
+}
+.sidebar-scroll {
+  height: 440px;  
+  width: 250px;
+  overflow-y: scroll;
+  padding-right: 40px;
+}
+
+.sidebar-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar-scroll::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 20px;
+}
+
+.sidebar-scroll::-webkit-scrollbar-track {
+  background: #222;
+}
+.featured-slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 20px 0;
+}
+
+.slider-track {
+  display: flex;
+  width: max-content;
+  animation: scroll 50s linear infinite;
+}
+
+.slide-card {
+  min-width: 250px;
+  margin: 0 20px;
+}
+  
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-30%); }
+}
+.slide-card:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+.sortby:hover{
+    cursor: pointer;
+    color: orangered;
+}
+.checkbox:hover{
+    cursor: pointer;
+    background-color: orangered;
+}
+.cartimage{
+    height: 150px;
+
+}
+.sidescroll{
+    background-color: rgb(32, 31, 31);
+    color: white;
+}
+.sidescroll::-webkit-scrollbar-track {
+  background: #1a1a1a;   /* dark black */
+  border-radius: 10px;
+}
+
+/* Scrollbar thumb */
+.sidescroll::-webkit-scrollbar-thumb {
+  background: #000000;   /* pure black */
+  border-radius: 10px;
+}
+
+
+
