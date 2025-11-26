@@ -71,7 +71,7 @@ export default function Cartpage() {
             </>
         ): <div className='w-full flex flex-col items-center justify-center text-white font-bold text-xl py-20'>
                         🛒 Your cart is empty...
-                     <Link to="/allproducts"> <h4 className='hover:bg-red-500 text-white mt-5'>Continue Shoping...</h4> </Link>
+                     <Link to="/allproducts"> <h4 className='hover:bg-red-500 rounded p-2 text-white mt-5'>Continue Shoping...</h4> </Link>
                     </div>}
                     {data.length>0&&(
                         <div className='w-[300px] p-3 rounded-xl h-fit'>
