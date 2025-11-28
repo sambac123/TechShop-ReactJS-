@@ -10,12 +10,15 @@ export default function CardAll({ item }) {
         const dispatch=useDispatch()
         const navigate=useNavigate("/cartpage")
         const [added,setAdded]=useState(false)
+        const [showalret,setShowalret]=useState(false)
         const handleAdded=()=>{
             dispatch(addtocart(item))
             setAdded(true)
+            setShowalret(true)
             setTimeout(()=>{
                 setAdded(false)
-            },3000)
+                setShowalret(false)
+            },1000)
         }
 
     return (
@@ -39,10 +42,14 @@ export default function CardAll({ item }) {
                           type="button" onClick={handleAdded}>
                           {added?"Added ":"Add to cart"}
                           </button>
+                        
                                 
                     </div>
                 </div>
             </div>
+              {showalret&&(
+                            <p className='fixed top-3 rounded justify-center bg-green-600 text-white text-center p-2 z-50 shadow-lg'>Product added to cart!</p>
+                          )}
         </div>
         
     )
