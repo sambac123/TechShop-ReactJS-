@@ -6,6 +6,7 @@ import { MdDelete } from "react-icons/md";
 import { Link } from 'react-router-dom';
 export default function Cartpage() {
     const data= useSelector((state)=>(state.cart.cartItem))
+    const totalQty=useSelector(state=>state.cart.cartItem.reduce((total,item)=>total+item.qty,0))
     console.log("data",data)
     const dispatch=useDispatch();
     const handleQty=(id,type)=>{

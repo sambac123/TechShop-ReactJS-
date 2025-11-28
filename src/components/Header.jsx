@@ -137,7 +137,7 @@ const categories=["All","Headphones","Earbuds","Earphones","Neckbands"]
         <Link to="/allproducts">
   <div className='card allproductscard border w-[18rem] h-[420px]'>
     <div className='card-body flex flex-col items-center justify-center h-full text-white text-xl gap-3'>
-      <p className='text-white text-opacity-50'>Browse All ➜</p>
+      <p className=' text-opacity-50 hover:text-red-500'>Browse All ➜</p>
     </div>
   </div>
 </Link>

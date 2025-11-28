@@ -45,9 +45,9 @@ export default function AllProducts() {
       if(sortby==="featured"){
         result=result.filter((item)=>item.tag==="featured-product")
       }
-      if(value>15000){
+      
         result=result.filter(item=>item.finalPrice<= value)
-      }
+      
       setFilterbrands(result)
     },[selectbrands,category,sortby,value])
  
