@@ -48,7 +48,7 @@ export default function CardAll({ item }) {
                 </div>
             </div>
               {showalret&&(
-                 <p className='fixed top-3 rounded justify-center bg-green-600 text-white text-center p-2 z-50 shadow-lg'>Product added to cart!</p>
+                 <p className='fixed top-16 rounded justify-center bg-green-600 text-white text-center p-2 z-50 shadow-lg'>Product added to cart!</p>
               )}
         </div>
         
