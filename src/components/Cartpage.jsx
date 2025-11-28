@@ -75,7 +75,7 @@ export default function Cartpage() {
                      <Link to="/allproducts"> <h4 className='continue mt-5 bg-red-400 text-white hover:bg-red-600 p-2 rounded'>Continue Shoping ➜</h4> </Link>
                     </div>}
                     {data.length>0&&(
-                        <div className='w-[300px] p-3 rounded-xl h-fit'>
+                        <div className='w-[300px] p-3 rounded-xl h-fit ordersummary'>
                             <h4 className='text-xl text-white'>Order Summary({data.length}items)</h4>
                             <div className='flex justify-between py-2 text-white'>
                                 <p>Original Price</p>

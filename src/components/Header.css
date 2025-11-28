@@ -181,6 +181,10 @@ a{
 .continue a{
     color: red;
 }
+.ordersummary{
+    border: 12px solid rgb(68, 67, 67);
+    background-color: rgb(29, 29, 29);
+}
 
 
 
