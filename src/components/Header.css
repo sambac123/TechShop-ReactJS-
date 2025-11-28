@@ -164,6 +164,9 @@ a{
   background: #000000;   /* pure black */
   border-radius: 10px;
 }
+.continue a{
+    color: red;
+}
 
 
 
