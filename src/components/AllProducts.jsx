@@ -8,7 +8,14 @@ export default function AllProducts() {
   const [filterbrands,setFilterbrands] =useState(productsData)
   const[sortby,setSortby]=useState("")
   const [category,setCategory]=useState([])
-   const [value,setValue]=useState(0)
+   const [value,setValue]=useState(15000)
+   const resetfilter=()=>{
+    setCategory([]),
+    setFilterbrands(productsData),
+    setselectBrands([]),
+    setSortby(),
+    setValue(15000)
+   }
   const handleCategory=(cate)=>{
     setCategory((prev)=>prev.includes(cate)?prev.filter((c)=>c!==cate):[...prev,cate])
   }
@@ -39,7 +46,7 @@ export default function AllProducts() {
         result=result.filter((item)=>item.tag==="featured-product")
       }
       if(value>15000){
-        result=result.filter(item=>item.finalPrice<=value)
+        result=result.filter(item=>item.finalPrice<= value)
       }
       setFilterbrands(result)
     },[selectbrands,category,sortby,value])
@@ -51,24 +58,28 @@ export default function AllProducts() {
       <div className="row">
         <div className='col-md-2'>
            <div className='sidebar-scroll mt-5'>
-            <h4 >Sort by</h4>
-            <p className='sortby' onClick={()=>setSortby("latest")}>Latest</p>
-            <p className='sortby' onClick={()=>setSortby("featured")}>Featured</p>
-            <p className='sortby' onClick={()=>setSortby("top")}>Top Rated</p>
-            <p className='sortby' onClick={()=>setSortby("low")}>Price (Lowest First)</p>
-            <p className='sortby' onClick={()=>setSortby("high")}>Price(Highest First)</p>
+           <button onClick={resetfilter} className='border bg-red-500 rounded shadow-2xl font-bold p-2 hover:bg-red-600 mb-2'>
+            ClearFilters
+           </button>
+            <h4 className='font-bold' >Sort by</h4>
+            <p className='sortby font-bold' onClick={()=>setSortby("latest")}>Latest</p>
+            <p className='sortby font-bold' onClick={()=>setSortby("featured")}>Featured</p>
+            <p className='sortby font-bold' onClick={()=>setSortby("top")}>Top Rated</p>
+            <p className='sortby font-bold' onClick={()=>setSortby("low")}>Price (Lowest First)</p>
+            <p className='sortby font-bold' onClick={()=>setSortby("high")}>Price(Highest First)</p>
             <hr/>
             <h4>Brands</h4>
-           <p> <input type='checkbox' className='brands'  onChange={()=>handleBrand("JBL")}/>JBL</p>
-           <p> <input type='checkbox'  onChange={()=>handleBrand("boAt")}/>boAt</p>
-           <p> <input type='checkbox'  onChange={()=>handleBrand("Sony")}/>Sony</p>
+           <p className='ml-1 font-bold gap-3 flex items-center'> <input type='checkbox' className='brands'  onChange={()=>handleBrand("JBL")}/>JBL</p>
+           <p className='ml-1 font-bold gap-3 flex items-center'> <input type='checkbox'  onChange={()=>handleBrand("boAt")}/>boAt</p>
+           <p className='ml-1 font-bold gap-3 flex items-center'> <input type='checkbox'  onChange={()=>handleBrand("Sony")}/>Sony</p>
             <h4>Category</h4>
-           <p> <input type='checkbox' onChange={()=>handleCategory("Headphones")}/>Headphones</p>
-           <p> <input type='checkbox' onChange={()=>handleCategory("Earbuds")}/>Earbuds</p>
-           <p> <input type='checkbox'  onChange={()=>handleCategory("Earphones")}/>Earphones</p>
-           <p> <input type='checkbox'  onChange={()=>handleCategory("Neckbands")}/>Neckbands</p>
+           <p className='ml-1 font-bold gap-3 flex items-center'> <input type='checkbox' onChange={()=>handleCategory("Headphones")} />Headphones</p>
+           <p className='ml-1 font-bold gap-3 flex items-center'> <input type='checkbox' onChange={()=>handleCategory("Earbuds")}/>Earbuds</p>
+           <p className='ml-1 font-bold gap-3 flex items-center'> <input type='checkbox'  onChange={()=>handleCategory("Earphones")}/>Earphones</p>
+           <p className='ml-1 font-bold gap-3 flex items-center'> <input type='checkbox'  onChange={()=>handleCategory("Neckbands")}/>Neckbands</p>
             <h4>Price</h4>
-           <input type="range" min="0" max="15000" value={value} onChange={(e)=>setValue(e.target.value)} className="w-44 appearance-none h-2 bg-gray-600 rounded-lg accent-blue-500"/>
+           <input type="range" min="0" max="15000" value={value} onChange={(e)=>setValue(Number(e.target.value))} className="w-44 appearance-none h-2 bg-gray-600 rounded-lg accent-blue-500"/>
+           <p className='mt-2'>{value}</p>
            </div>
         </div>
       <div className="col-md-9">
