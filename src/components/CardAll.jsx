@@ -30,10 +30,15 @@ export default function CardAll({ item }) {
                     <p className="card-text text-white border-bottom mb-3 mt-3 h-[50px] overflow-hidden">{item.info}</p>
                     <p className='text-white'>  <del className='gap-2'>₹{item.originalPrice}</del>  <strong className=''>₹{item.finalPrice}</strong></p>
                     <div className='flex justify-center mt-3'>
-                    <button className="align-middle bg-red-500 text-white rounded select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 px-6  shadow-gray-900/10 hover:shadow-gray-900/20 focus:opacity-[0.85] active:opacity-[0.85] active:shadow-none block w-full bg-blue-gray-900/10 text-blue-gray-900 shadow-none hover:scale-105 hover:shadow-none focus:scale-105 focus:shadow-none active:scale-100"
-                    type="button" onClick={handleAdded}>
-                    {added?"Added ":"Add to cart"}
-                    </button>
+                  <button  className={`align-middle text-white rounded select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 px-6 w-full 
+                          ${added 
+                         ? "bg-green-600 hover:bg-green-700"  
+                         : "bg-red-500 hover:bg-red-600"
+                          }
+                          `}
+                          type="button" onClick={handleAdded}>
+                          {added?"Added ":"Add to cart"}
+                          </button>
                                 
                     </div>
                 </div>
