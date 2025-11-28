@@ -35,7 +35,7 @@ const categories=["All","Headphones","Earbuds","Earphones","Neckbands"]
 >
 
   {/* Indicators */}
-  <div className="carousel-indicators custom-indicators">
+  <div className="carousel-indicators custom-indicators ">
     <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="0" className="active"></button>
     <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="1"></button>
     <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="2"></button>
@@ -86,7 +86,7 @@ const categories=["All","Headphones","Earbuds","Earphones","Neckbands"]
   </div>
 
 </div>
-<h2 className='text-white text-center Feature mt-5 mb-4'>Feature Products</h2>
+<h2 className='text-white text-center Feature mt-5 py-5 mb-4'>Feature Products</h2>
 
 <div className="featured-slider">
   <div className="slider-track">
