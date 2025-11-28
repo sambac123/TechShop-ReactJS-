@@ -23,7 +23,7 @@ export default function CardAll({ item }) {
 
     return (
         <div className='justify-center mb-5'>
-            <div className="card border w-[18rem] h-[420px] flex flex-col">
+            <div className="card border w-[18rem] h-[420px] flex flex-col shadow-2xl">
                 <img src={imageSrc} className="card-img-top" alt={item.title} />
                 <div className="card-body ml-2 flex-col justify-between px-3 pb-3">
                     <div className='flex'>
@@ -48,8 +48,8 @@ export default function CardAll({ item }) {
                 </div>
             </div>
               {showalret&&(
-                            <p className='fixed top-3 rounded justify-center bg-green-600 text-white text-center p-2 z-50 shadow-lg'>Product added to cart!</p>
-                          )}
+                 <p className='fixed top-3 rounded justify-center bg-green-600 text-white text-center p-2 z-50 shadow-lg'>Product added to cart!</p>
+              )}
         </div>
         
     )

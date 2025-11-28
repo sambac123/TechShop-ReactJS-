@@ -38,7 +38,7 @@ export default function AllProducts() {
       if(sortby==="featured"){
         result=result.filter((item)=>item.tag==="featured-product")
       }
-      if(value>0){
+      if(value>15000){
         result=result.filter(item=>item.finalPrice<=value)
       }
       setFilterbrands(result)
@@ -69,12 +69,22 @@ export default function AllProducts() {
            <p> <input type='checkbox'  onChange={()=>handleCategory("Neckbands")}/>Neckbands</p>
             <h4>Price</h4>
            <input type="range" min="0" max="15000" value={value} onChange={(e)=>setValue(e.target.value)} className="w-44 appearance-none h-2 bg-gray-600 rounded-lg accent-blue-500"/>
-           <p>{value}</p>
            </div>
         </div>
-      <div className='grid col-md-9 grid-cols-4 gap-y-5 gap-x-24 ml-4 mt-5'>
-        {filterbrands.map((item,index)=><div key={index}><CardAll item={item}/></div>)}
-      </div>
+      <div className="col-md-9">
+  {value === 0 ? (
+    <h2 className="text-center mt-5">No products available</h2>
+  ) : (
+    <div className="grid grid-cols-4 gap-y-5 gap-x-24 ml-4 mt-5">
+      {filterbrands.map((item, index) => (
+        <div key={index}>
+          <CardAll item={item} />
+        </div>
+      ))}
+    </div>
+  )}
+</div>
+
     </div>
     </div>
     </div>
