@@ -33,21 +33,24 @@ background-color: rgba(7, 7, 7, 0.863);
 .top{
     background-color: rgba(7, 7, 7, 0.863);
 }
-.carousel-indicators button{
-    background-color: white !important;
-    width: 6px;
-    height: 6px;
-    border-radius: 50% !important;
-    margin: 0 6px;
-    transition: 0.3s ease;
+/* Rounded carousel indicators */
+.carousel-indicators [data-bs-target] {
+  background-color: #fff !important;
+  width: 6px !important; 
+  height: 6px !important;
+  border-radius: 50% !important; 
+  margin: 0 16px;
+  transition: all 0.3s ease;
+
 }
 
-.carousel-indicators [data-bs-target] {background-color: #fff; width: 2px; height: 5px; border-radius: 100%; margin: 0 5px;}
-   .carousel-indicators [data-bs-target]:hover {
-  background-color: #f44336; 
-  /* transform: scale(2);  */
-  transition: all 0.3s ease;
+.carousel-indicators [data-bs-target]:hover,
+.carousel-indicators .active {
+  background-color: #f44336 !important;
+  transform: scale(1.1); 
 }
+
+
 .ouradvantages{
        background-color:rgba(10, 10, 10, 0.863) !important;
 }
@@ -57,6 +60,10 @@ background-color: rgba(7, 7, 7, 0.863);
 .card{
     margin-bottom: 0 !important;
    border: 0 !important;
+   height: 520px !important;
+}
+.card-body{
+    height: 340px !important;
 }
 .cardfe:hover{
     transform: scale(1.1);
@@ -98,6 +105,9 @@ a{
   width: 250px;
   overflow-y: scroll;
   padding-right: 40px;
+  border: 2px solid rgb(69, 69, 69);
+  border-radius: 20px;
+  padding: 10px;
 }
 
 .sidebar-scroll::-webkit-scrollbar {
@@ -105,12 +115,14 @@ a{
 }
 
 .sidebar-scroll::-webkit-scrollbar-thumb {
-  background: #555;
-  border-radius: 20px;
+  background: #161616;
+  border-radius: 100px;
+  height: min-content;
 }
 
 .sidebar-scroll::-webkit-scrollbar-track {
-  background: #222;
+  background: #353535;
+  border-radius: 100px;
 }
 .featured-slider {
   width: 100%;

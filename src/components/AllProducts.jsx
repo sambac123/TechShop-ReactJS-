@@ -82,7 +82,7 @@ export default function AllProducts() {
            <p className='mt-2'>{value}</p>
            </div>
         </div>
-      <div className="col-md-9">
+      <div className="col-md-9 ml-5">
   {value === 0 ? (
     <h2 className="text-center mt-5">No products available</h2>
   ) : (
