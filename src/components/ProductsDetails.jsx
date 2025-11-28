@@ -18,7 +18,7 @@ export default function ProductsDetails() {
   console.log("relatedfilter",relatedfilter)
   return (
     <>
-    <div className='detailspage py-20 '>
+    <div className='detailspage py-20 px-34 '>
       <div className='row mr-0'>
       <div className='side  col-md-1 d-flex flex-column align-items-center gap-5 py-4 '>
          <img src={Products.images[0]} alt="" className='sideimage mb-3 ml-5' />
