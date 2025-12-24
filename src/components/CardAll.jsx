@@ -11,6 +11,7 @@ export default function CardAll({ item }) {
         const navigate=useNavigate("/cartpage")
         const [added,setAdded]=useState(false)
         const [showalret,setShowalret]=useState(false)
+       
         const handleAdded=()=>{
             dispatch(addtocart(item))
             setAdded(true)
@@ -42,9 +43,10 @@ export default function CardAll({ item }) {
                           type="button" onClick={handleAdded}>
                           {added?"Added ":"Add to cart"}
                           </button>
-                        
+                       
                                 
                     </div>
+                    
                 </div>
             </div>
               {showalret&&(

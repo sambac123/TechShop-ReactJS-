@@ -46,7 +46,7 @@ background-color: rgba(7, 7, 7, 0.863);
 
 .carousel-indicators [data-bs-target]:hover,
 .carousel-indicators .active {
-  background-color: #f44336 !important;
+  background-color: #e91f11 !important;
   transform: scale(1.1); 
 }
 
@@ -185,6 +185,7 @@ a{
     border: 12px solid rgb(68, 67, 67);
     background-color: rgb(29, 29, 29);
 }
+
 
 
 

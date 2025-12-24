@@ -72,7 +72,7 @@ export default function Cartpage() {
             </>
         ): <div className='w-full flex flex-col items-center justify-center text-white font-bold text-xl py-20'>
                         🛒 Your cart is empty...
-                     <Link to="/allproducts"> <h4 className='continue mt-5 bg-red-400 text-white hover:bg-red-600 p-2 rounded'>Continue Shoping ➜</h4> </Link>
+                     <Link to="/allproducts"> <h4 className='continue mt-5 bg-red-500 text-white hover:bg-red-600 p-2 rounded'>Continue Shoping ➜</h4> </Link>
                     </div>}
                     {data.length>0&&(
                         <div className='w-[300px] p-3 rounded-xl h-fit ordersummary'>
@@ -81,11 +81,11 @@ export default function Cartpage() {
                                 <p>Original Price</p>
                                 <p>-{originalprice}</p>
                             </div>
-                             <div className='flex justify-between py-2 text-green-400'>
+                             <div className='flex justify-between py-2 text-red-600'>
                                 <p>Discount</p>
                                 <p>-{discount}</p>
                             </div>
-                            <div className='flex justify-between text-white'>
+                            <div className='flex justify-between text-green-500'>
                                 <p>Delivery</p>
                                 <p>Free</p>
                             </div>
