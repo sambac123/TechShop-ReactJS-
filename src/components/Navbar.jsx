@@ -38,7 +38,9 @@ export default function Navbar() {
   const cartcount=useSelector((state)=>state.cart.cartItem.reduce((total,item)=>total+item.qty,0))
   return (
     <>
-   <div className="header shadow fixed top-0 left-0 w-full z-50">
+
+   
+   <div className="header shadow static top-0 left-0 w-full z-50">
      <div className="h-16 mx-auto px-5 flex items-center justify-between">
      <Link to="/">  <h2 className="text-2xl hover:text-cyan-500 transition-colors cursor-pointer text-white">Tech Shop</h2></Link>
          <ul className="flex items-center gap-5 text-xl">
@@ -140,6 +142,7 @@ export default function Navbar() {
          </div>
        </div>
      </div>
+   
      </>
   )
 }

@@ -6,9 +6,11 @@ import ProductsDetails from '../components/ProductsDetails'
 import Navbar from '../components/Navbar'
 import AllProducts from '../components/AllProducts'
 import Cartpage from '../components/Cartpage'
+import Offers from '../components/Offers'
 export default function Routing() {
   return (
     <div>
+      <Offers/>
       <Navbar/>
         <Routes>
             <Route path='/' element ={<Header products={productsData} />}/>
